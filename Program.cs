@@ -11,6 +11,8 @@ internal class Program
 
             Console.WriteLine("Choose which items to add to your pack. Choose from: Arrow, Bow, Rope, Water, Food, or Sword. Hit enter after choosing your item.");
 
+            Console.WriteLine(Pack.ToString());
+
             InventoryItem Item = Console.ReadLine() switch
             {
                 "Arrow" => new Arrow(),

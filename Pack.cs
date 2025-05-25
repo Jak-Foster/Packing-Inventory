@@ -27,5 +27,19 @@ namespace Packing_Inventory
             return true;
         }
 
+        public override string ToString()
+        {
+            if (CurrentInventoryItems[0] == null) return "Pack currently contains nothing.";
+
+            string Result = "";
+            foreach (InventoryItem Item in CurrentInventoryItems)
+            {
+                Result += Item?.ToString() ?? "";
+                Result += " ";
+            }
+
+            return $"Pack currently contains: {Result}";
+        }
+
     }
 }
